@@ -8,7 +8,7 @@ class AudioPlayerApp extends StatelessWidget {
     return MaterialApp(
       title: 'Audio Player App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        //primarySwatch: Colors.blue,
       ),
       home: AudioPlayerScreen(),
     );
@@ -34,6 +34,7 @@ class _AudioPlayerScreenState extends State<AudioPlayerScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Audio Player'),
+        backgroundColor:Color(0xFF7165D6),
       ),
       body: Center(
         child: Column(
