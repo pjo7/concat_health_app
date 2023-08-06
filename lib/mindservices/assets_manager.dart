@@ -1,6 +1,6 @@
 class AssetsManager {
-  static String imagePath = "assets/images";
-  static String userImage = "chatbot/assets/images/R.png";
-  static String botImage = "$imagePath/logo.png";
-  static String openaiLogo = "$imagePath/openai_logo.jpg";
+  static String imagePath = "images";
+  static String userImage = "usr.jpg";
+  static String botImage = "$imagePath/doctor1.jpg";
+  static String openaiLogo = "$imagePath/usr.jpg";
 }
