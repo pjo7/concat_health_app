@@ -8,7 +8,7 @@ class HealthStatsApp extends StatelessWidget {
     return MaterialApp(
       title: 'Health Stats App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        //primarySwatch: Colors.blue,
       ),
       home: HealthStatsScreen(),
     );
@@ -49,8 +49,8 @@ class _HealthStatsScreenState extends State<HealthStatsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Health Stats'),
-        backgroundColor: Colors.blue,
+        title: Text('Health Statistics'),
+        backgroundColor: Color(0xFF7165D6),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -59,7 +59,7 @@ class _HealthStatsScreenState extends State<HealthStatsScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
-                'Heartbeat Status',
+                'Heartbeat Statistics',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 10),
