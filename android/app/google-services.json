@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "387729194746",
+    "project_id": "concat-health-app",
+    "storage_bucket": "concat-health-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387729194746:android:d9361de8bcbe6546425343",
+        "android_client_info": {
+          "package_name": "com.example.healthcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "387729194746-dl90d2cns5p2teaad1ehse1fhpmtbv10.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9cKRyKWAeLb2LSRM-f-E_ARqnq_Hzb04"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "387729194746-dl90d2cns5p2teaad1ehse1fhpmtbv10.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

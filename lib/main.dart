@@ -1,6 +1,7 @@
 import 'dart:async';
 
 //import 'package:chatgpt_course/screens/animated.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:healthcare/screens/welcome_screen.dart';
 import 'package:provider/provider.dart';
@@ -9,7 +10,9 @@ import 'mindproviders/chats_provider.dart';
 import 'mindproviders/models_provider.dart';
 import 'mindscreen/chat_screen.dart';
 
-void main() {
+Future <void> main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

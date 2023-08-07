@@ -1,15 +1,42 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:healthcare/authentication/auth.dart';
+import 'package:healthcare/screens/home_screen.dart';
 import 'package:healthcare/screens/sign_up_screen.dart';
+import 'package:healthcare/screens/welcome_screen.dart';
 import 'package:healthcare/widgets/navbar_roots.dart';
 
 class loginScreen extends StatefulWidget {
   @override
   State<loginScreen> createState() => _loginScreenState();
+
+  final User? user = Auth().currentUser;
+
+  Future<void> signOut() async {
+    await Auth().signOut();
+  }
 }
 
 class _loginScreenState extends State<loginScreen> {
+
+  final TextEditingController _controllerEmail = TextEditingController();
+  final TextEditingController _controllerPassword = TextEditingController();
+
+  Future<void> signInWithEmailAndPassword() async {
+    try{
+      await Auth().signInWithEmailAndPassword(email: _controllerEmail.text, password: _controllerPassword.text,);
+    } on FirebaseAuthException catch (e) {}
+  }
+
+  Future<void> createUserWithEmailAndPassword () async {
+    try {
+      await Auth().createUserWithEmailAndPassword(email: _controllerEmail.text,password: _controllerPassword.text);
+    } on FirebaseAuthException catch (e) {}
+  }
+
   bool passToggle = true;
+  bool isLogin = false;
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -29,6 +56,7 @@ class _loginScreenState extends State<loginScreen> {
               Padding(
                 padding: const EdgeInsets.all(12),
                 child: TextField(
+                  controller: _controllerEmail,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     label: Text("Enter Username"),
@@ -39,6 +67,7 @@ class _loginScreenState extends State<loginScreen> {
               Padding(
                 padding: const EdgeInsets.all(12),
                 child: TextField(
+                  controller: _controllerPassword,
                   obscureText: passToggle ? true : false,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
@@ -64,13 +93,16 @@ class _loginScreenState extends State<loginScreen> {
               Padding(
                 padding: const EdgeInsets.all(15),
                 child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => NavBarRoots(),
-                        ));
+                  onTap: () => StreamBuilder(
+                    stream: Auth().authStateChanges,
+                  builder: (context,snapshot){
+                    if (snapshot.hasData){
+                      return HomeScreen();
+                    }else{
+                      return WelcomeScreen();
+                    }
                   },
+                  ),
                   child: Container(
                     padding: EdgeInsets.symmetric(vertical: 15),
                     width: double.infinity,

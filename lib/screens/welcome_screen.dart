@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:healthcare/screens/home_screen.dart';
+// import 'package:healthcare/screens/home_screen.dart';
 import 'package:healthcare/screens/login_screen.dart';
 import 'package:healthcare/screens/sign_up_screen.dart';
 import 'package:healthcare/widgets/navbar_roots.dart';
@@ -46,7 +46,7 @@ class WelcomeScreen extends StatelessWidget {
               ),
               SizedBox(height: 50),
               Text(
-                "Doctors Appointment",
+                "CARESS",
                 style: TextStyle(
                   color: Color(0xFF7165D6),
                   fontSize: 35,
@@ -57,7 +57,7 @@ class WelcomeScreen extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Text(
-                "Appoint Your Doctor",
+                "Your Personal Doctor",
                 style: TextStyle(
                   color: Colors.black54,
                   fontSize: 18,
