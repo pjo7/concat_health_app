@@ -3,7 +3,7 @@
 
 
 # Team Members
-1)Harikrishna ->  harikris001\n
+1)Harikrishna ->  harikris001
 2)Pooja     ->  pjo7
 3)Sreepriya ->  Sreepriyaa
 
