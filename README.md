@@ -3,9 +3,9 @@
 
 
 # Team Members
-1)Harikrishna ->  harikris001
+1)Harikrishna ->  harikris001\n
 2)Pooja     ->  pjo7
-3)Sreepriya ->
+3)Sreepriya ->  Sreepriyaa
 
 # Team Name-HPS 
 
